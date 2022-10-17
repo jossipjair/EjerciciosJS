@@ -1,0 +1,84 @@
+CLASE 11/09
+********************
+CONCATENAR TEXTO CON PLANTILLA DE TEXTO: BACKSTIP
+
+ ` 
+
+TIPOS DE EJECUCIÓN DE UNA FUNCION
+
+- DIRECTA:
+     
+    add();
+
+- INDIRECTA:
+
+    el resultado de una fundción es resultado de otra función
+
+    addEventListener("click", add);
+
+- RETORNO DE VARIABLE: con la palabra "return"
+- AMBITO DE VARIABLES: viven dentro de una función
+
+- CUANDO SE HAGA CLICK SE EJECUTE EL EVENTO ADD
+          .addEventListener para poder ejecutar eventos en click
+    addBtn.addEventListener("click", add);
+
+- OBTENER EL VALOR DE ETIQUETA DE HTML DESDE JAVASCRIPT
+ 
+    const inputEntered = userInput.value;
+
+- PARSEANDO VALORES EN JS
+
+    currentResult = currentResult + parseInt(userInput.value);
+
+
+- SE AGREGA EL SIMBOLO MAS ANTES DEL NOMBRE DE LA VARIABLE PARA PARSEAR A DOUBLE
+    
+    currentResult = currentResult + (+userInput.value)
+
+- CREAR ARREGLO VACIO
+
+    const logEntries = [];
+
+- AGREGAR VALORES AL ARRAY CON PUSH
+
+    logEntries.push(enteredNumber)
+
+- VALORES ESPECIALES
+    
+    undefined: Valor por defecto de una variable cuando no ha sido inicializada con un valor. No debe ser asignado.
+    null: No es un valor por defecto. Se asigna a una variable cuando queremos limpiarla o resetearla.
+    NaN: Cuando la variable no es un número. Es un tipo de número y se puede usar en calculos. Resultado de una operación incorrecta
+
+- METODO typeof: permite conocer el tipo de dato de la variable
+    typeof 3 = number
+    typeof "hola" = string
+    typeof true = boolean
+    typeof undefined = undefined
+    typeof [3, 4, 'x'] = object
+    typeof {name: 'Jair'} = object
+    typeof null = object
+    typeof NaN = number
+
+- JAVASCRIPT ASYNCRONO
+    Archivo externo (async)    Se carga y ejecuta inmediatamente. Bloquea el parseo y el enderizado
+    <script src="app.js" async></script>
+    
+    Archivo externo (defer)    Se carga y ejecuta después del parseo del navegador y del renderizado del navegador
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

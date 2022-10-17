@@ -1,0 +1,43 @@
+!== para compara desigualdad de tipos
+=== igual de tipos
+|| or
+&& and
+
+
+------------------
+0 
+cadena vacia
+null
+NaN
+undefined
+------------------
+son considerados false
+
+
+
+VARIABLES GLOBALES
+
+const MODE_ATTACK = "ATTACK";
+
+
+
+ESTRUCTURAR DATOS EN JAVASCRIPT:: SE DEBER REALIZAR CON OBJETOS
+
+
+    const logEntry = {
+        event : event,
+        monsterHealth: monsterHealth,
+        playerHealth: playerHealth
+    }
+
+
+
+    const logEntry = {
+        event,
+        monsterHealth,
+        playerHealth
+    }
+
+
+battleLog.push(logEntry);
+PUSH agrega al final del arreglo
