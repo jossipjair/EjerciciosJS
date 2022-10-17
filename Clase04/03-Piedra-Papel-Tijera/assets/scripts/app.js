@@ -4,12 +4,14 @@ function startGame() {}
 
 //Otra manera con funcion anonima
 btnStart.addEventListener("click", function () {
-  //const choiceUser = prompt("Elija: PIEDRA, PAPEL O TIJERA");
-  //const selection = choiceUser.toUpperCase(); //Convierte a mayusculas el valor del string
+
+});
+
+function getPlayerChoice(){
 
   const selection = prompt("Elija: PIEDRA, PAPEL O TIJERA").toUpperCase();
 
-  if (selection !== "ROCA" && selection !== "PAPEL" && selection !== "TIJERA") {
+  if (selection !== "PIEDRA" && selection !== "PAPEL" && selection !== "TIJERA") {
     alert("Ingrese valor válido");
     return; //Termina instrucción de función
   }
@@ -17,7 +19,7 @@ btnStart.addEventListener("click", function () {
   return selection;
 
   alert("El juego ha iniciado");
-});
+}
 
 function getComputerChoice() {
   const randomValue = Math.random();
@@ -25,7 +27,7 @@ function getComputerChoice() {
   let selection;
 
   if (randomValue < 0.34) {
-    selection = "ROCK";
+    selection = "ROCA";
   } else if (randomValue < 0.67) {
     selection = "PAPEL";
   } else {
@@ -34,3 +36,13 @@ function getComputerChoice() {
 
   return selection;
 }
+
+btnStart.addEventListener('click', function(){
+
+  const playerChoice = getPlayerChoice();
+  const computerChoice = getComputerChoice();
+
+  console.log("Player Choice",playerChoice);
+  console.log("Computer Choice", computerChoice);
+
+});
