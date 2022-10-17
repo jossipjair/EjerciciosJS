@@ -24,15 +24,17 @@ function getPlayerChoice(){
 function getComputerChoice() {
   const randomValue = Math.random();
 
-  let selection;
+  //Operador terciario
+  const selection = randomValue < 0.34 ? "PIEDRA" : randomValue < 0.67 ? "PAPEL" : "TIJERA";
 
-  if (randomValue < 0.34) {
+  /*if (randomValue < 0.34) {
     selection = "ROCA";
   } else if (randomValue < 0.67) {
     selection = "PAPEL";
   } else {
     selection = "TIJERA";
   }
+*/
 
   return selection;
 }
