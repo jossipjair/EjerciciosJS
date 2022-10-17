@@ -24,7 +24,7 @@ function getPlayerChoice(){
 function getComputerChoice() {
   const randomValue = Math.random();
 
-  //Operador terciario
+  //Operador ternario
   const selection = randomValue < 0.34 ? "PIEDRA" : randomValue < 0.67 ? "PAPEL" : "TIJERA";
 
   /*if (randomValue < 0.34) {
@@ -39,12 +39,34 @@ function getComputerChoice() {
   return selection;
 }
 
-btnStart.addEventListener('click', function(){
+const getWinner = (computer, player) => {
+  if(computer === 'PIEDRA' && player === 'PAPEL'){
+    return "¡PLAYER WINNER!"
+  }else if(computer === 'PIEDRA'&& player === 'TIJERA'){
+    return "¡COMPUTER WINNER!"
+  }else if(computer === 'PAPEL' && player === 'PIEDRA'){
+    return "¡COMPUTER WINNER!"
+  }else if(computer === 'PAPEL' && player === 'TIJERA'){
+    return "¡PLAYER WINNER!"
+  }else if(computer === 'TIJERA' && player === 'PAPEL'){
+    return "¡COMPUTER WINNER!"
+  }else if(computer === 'TIJERA' && player === 'PIEDRA'){
+    return "¡PLAYER WINNER!"
+  }else if(computer === player){
+    return "¡EMPATE!"
+  }
+}
+
+btnStart.addEventListener('click', ()=>{
 
   const playerChoice = getPlayerChoice();
   const computerChoice = getComputerChoice();
 
+
+  const winner = getWinner(computerChoice, playerChoice);
+
   console.log("Player Choice",playerChoice);
   console.log("Computer Choice", computerChoice);
+  alert(getWinner(computerChoice, playerChoice));
 
 });
